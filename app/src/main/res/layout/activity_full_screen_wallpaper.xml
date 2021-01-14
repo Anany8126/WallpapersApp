@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".FullScreenWallpaper">
+
+    <com.leo.simplearcloader.SimpleArcLoader
+        android:visibility="visible"
+        android:id="@+id/arcloader"
+        android:layout_centerInParent="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:arc_style="complete_arc"
+        app:arc_speed="medium"
+        app:arc_colors="@style/AppTheme"
+        app:arc_margin="3dp">
+    </com.leo.simplearcloader.SimpleArcLoader>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/photo_view"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="SET WallPapper"
+        android:textColor="#fff"
+        android:id="@+id/set_wallpaper"
+        android:layout_alignParentBottom="true"
+        android:onClick="SetWallpaperEvent"
+        android:background="@drawable/button_back"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        tools:ignore="OnClick" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_above="@+id/set_wallpaper"
+        android:text="Save "
+        android:textColor="#fff"
+        android:id="@+id/down_wallpaper"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="DownloadWall"
+        android:background="@drawable/button_back"
+        android:layout_marginBottom="2dp"
+        tools:ignore="OnClick" />
+
+</RelativeLayout>
